@@ -3,6 +3,13 @@
 const getBiggest = (x, y) => {
   // x and y are integers.  Return the larger integer
   // if they are the same return either one
+  if (x > y) {
+    return x;
+  } else if (y > x) {
+    return y;
+  } else if (x === y) {
+    return x;
+  }
 };
 
 const greeting = (language) => {
@@ -16,6 +23,10 @@ const greeting = (language) => {
 const isTenOrFive = (num) => {
   // return true if num is 10 or 5
   // otherwise return false
+  if (num === 10 || num === 5) {
+    return true;
+  }
+  return false;
 };
 
 const isInRange = (num) => {
@@ -29,6 +40,10 @@ const isInteger = (num) => {
   // -10 -> true
   // otherwise return false
   // hint: you can solve this using Math.floor
+  if (Math.floor(num) === num) {
+    return true;
+  }
+  return false;
 };
 
 const fizzBuzz = (num) => {
@@ -44,6 +59,12 @@ const isPrime = (num) => {
   // hint: a prime number is only evenly divisible by itself and 1
   // hint2: you can solve this using a for loop
   // note: 0 and 1 are NOT considered prime numbers
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num > 1;
 };
 
 const returnFirst = (arr) => {
@@ -52,6 +73,7 @@ const returnFirst = (arr) => {
 
 const returnLast = (arr) => {
   // return the last item of the array
+  
 };
 
 const getArrayLength = (arr) => {
