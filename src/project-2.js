@@ -84,7 +84,7 @@ const isPrime = (num) => {
       return false;
     }
   }
-  return num > 1;
+  return (num > 1);
 };
 
 const returnFirst = (arr) => {
@@ -94,7 +94,7 @@ const returnFirst = (arr) => {
 
 const returnLast = (arr) => {
   // return the last item of the array
-  
+  return (arr.pop());
 };
 
 const getArrayLength = (arr) => {
@@ -106,6 +106,10 @@ const incrementByOne = (arr) => {
   // arr is an array of integers
   // increase each integer by one
   // return the array
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] += 1;
+  }
+  return arr;
 };
 
 const addItemToArray = (arr, item) => {
@@ -119,6 +123,8 @@ const addItemToFront = (arr, item) => {
   // add the item to the front of the array
   // return the array
   // hint: use the array method .unshift
+  arr.unshift(item);
+  return arr;
 };
 
 const wordsToSentence = (words) => {
@@ -132,6 +138,12 @@ const wordsToSentence = (words) => {
 const contains = (arr, item) => {
   // check to see if item is inside of arr
   // return true if it is, otherwise return false
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === item) {
+      return true;
+    }
+  }
+  return false;
 };
 
 const addNumbers = (numbers) => {
@@ -148,6 +160,12 @@ const addNumbers = (numbers) => {
 const averageTestScore = (testScores) => {
   // testScores is an array.  Iterate over testScores and compute the average.
   // return the average
+  let total = 0;
+  for (let i = 0; i < testScores.length; i++) {
+    total += testScores[i];
+  }
+  const avg = total / testScores.length;
+  return avg;
 };
 
 const largestNumber = (numbers) => {
